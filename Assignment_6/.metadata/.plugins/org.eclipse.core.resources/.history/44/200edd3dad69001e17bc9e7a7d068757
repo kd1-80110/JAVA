@@ -1,0 +1,16 @@
+
+public class ExceptionLineTooLong extends Exception {
+	
+	
+
+	public ExceptionLineTooLong() {
+		super("The strings is too long");
+		
+	}
+
+	@Override
+	public String toString() {
+		return "ExceptionLineTooLong []";
+	}
+
+}

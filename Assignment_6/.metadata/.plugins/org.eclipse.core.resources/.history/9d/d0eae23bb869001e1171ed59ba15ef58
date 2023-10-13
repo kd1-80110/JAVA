@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter x coordinate ");
+		double x = sc.nextDouble();
+		System.out.println("enter y coordinate ");
+		double y = sc.nextDouble();
+		System.out.println("enter diameter ");
+		double d = sc.nextDouble();
+		
+		Circle c1 = new Circle(x,y,d);
+		System.out.println(c1);
+		sc.close();
+
+	}
+
+}

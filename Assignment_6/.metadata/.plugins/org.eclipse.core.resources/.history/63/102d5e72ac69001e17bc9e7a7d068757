@@ -1,0 +1,9 @@
+
+public class ExceptionLineTooLong extends Exception {
+
+	@Override
+	public String toString() {
+		return "ExceptionLineTooLong []";
+	}
+
+}

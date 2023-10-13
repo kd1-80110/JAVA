@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class StringLength {
+
+	public static void main(String[] args) {
+		String string;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string");
+		string = sc.nextLine();
+					
+		try {
+			System.out.println("Length of string is : "+string.length());
+			if(string.length() > 80)
+			{
+				throw new ExceptionLineTooLong();
+			}
+					
+			System.out.println("string entered is : "+string);			
+		} catch(ExceptionLineTooLong exception) {
+			System.out.println(exception.getMessage());
+			System.out.println(exception);
+		}
+		sc.close();
+	}
+
+	@Override
+	public String toString() {
+		return "StringLength []";
+	}		
+
+}
