@@ -1,0 +1,14 @@
+package com.sunbeam;
+
+import java.util.Comparator;
+
+public class ArrayComparator implements Comparator<Double>{
+
+	@Override
+	public int compare(Double s1, Double s2) {
+		// TODO Auto-generated method stub
+		int diff = s1.intValue() - s2.intValue();
+		return diff;
+	}
+
+}

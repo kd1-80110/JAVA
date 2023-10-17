@@ -1,0 +1,17 @@
+package com.sunbeam;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		Student[] arr=new Student[5];
+		arr[0]=new Student(3,"Prasanna","Islampur",80.9);
+		arr[1]=new Student(7,"Akhilesh","Ichalkaranji",79.9);
+		arr[2]=new Student(4,"Akash","Kolhapur",75.9);
+		arr[3]=new Student(1,"Pavan","Shirala",72.9);
+		arr[4]=new Student(2,"Suyash","Tambave",60.9);
+		arr[5]=new Student(6,"Vinod","Sangli",90.9);
+		arr[6]=new Student(5,"Pratik","Jath",86.9);
+
+	}
+
+}
