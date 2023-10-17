@@ -1,0 +1,22 @@
+package com.sunbeam;
+
+public class Palindrome {
+	public static boolean isPalindrome(String string) {
+		for (int i = 0,j=string.length()-1; i < string.length(); i++,j--) {
+			
+				if (string.charAt(i) != string.charAt(j)) {
+					return false;
+				}
+	
+			
+		}
+		return true;
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
