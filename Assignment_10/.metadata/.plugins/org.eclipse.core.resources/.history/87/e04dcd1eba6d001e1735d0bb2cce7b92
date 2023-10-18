@@ -1,0 +1,67 @@
+package com.sunbeam;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		List<Employee> list =new LinkedList<Employee>();
+		Employee e;
+		
+		
+		int choice;
+		do {
+			Scanner sc = new Scanner(System.in);
+
+			System.out.println("0. Exit");
+			System.out.println("1. ADD");
+			System.out.println("2. DELETE");
+			System.out.println("3. FIND");
+			System.out.println("4. SORT");
+			System.out.println("5. EDIT / UPDATE");
+			System.out.print("Enter your choice: ");
+			choice = sc.nextInt();
+			sc.nextLine();
+
+			switch (choice) {
+			case 0:// Exit
+				System.out.println("Exiting the program. Thank you!");
+				break;
+
+			case 1:// ADD
+				e=new Employee();
+				e.accept();
+				list.add(e);
+				break;
+
+			case 2:// DELETE
+				System.out.println("Enter the index to delete :");
+				int id = sc.nextInt();
+					list.remove(id);
+				break;
+
+			case 3:// FIND
+				
+				break;
+
+			case 4:// SORT
+				
+				break;
+
+			case 5:// EDIT/UPDATE
+				
+				break;
+
+			default:
+				System.out.println("Wrong Choice Entered...");
+				break;
+			}
+
+		} while (choice != 0);
+	}
+
+}

@@ -1,0 +1,93 @@
+package com.sunbeam;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+
+public class BookMain {
+
+	public static void main(String[] args) {
+		List<Book> list=new ArrayList<>();
+		Book b;
+		int index;
+		int choice;
+		int quantity = 0;
+		do {
+			Scanner sc=new Scanner(System.in);
+
+            System.out.println("0. Exit");
+            System.out.println("1. Add a new book in List");
+            System.out.println("2. Display all books in forward order using random access");
+            System.out.println("3. Search a book with given isbn[HINT:-indexOf()]");
+            System.out.println("4. Delete a book at given index");
+            System.out.println("5. Delete a book at given isbn");
+            System.out.println("6. Reverse the list[HINT:-Collections.reverseList(]");
+//            System.out.println("7. Sort all books by price in descending order");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+			
+			switch(choice) {
+			case 0://Exit
+				System.out.println("Exiting the program. Thank you!");
+				break;
+				
+			case 1://add book in list
+				b=new Book();
+				b.accept();
+				if (list.contains(b)) {
+			         System.out.println("Book is present,Increment its quantity");
+			         
+			         b.setQuantity(quantity);
+			         quantity++;
+			      } else {
+			         System.out.println("Book is not present,then add a new book");
+			         list.add(b);
+			      }
+				break;
+				
+			case 2://display all
+				for (Book book : list) {
+					System.out.println(book);
+					
+				}
+				break;
+			
+			case 3://remove at index
+				System.out.println("Enter index which element to be deleted");
+				index=sc.nextInt();
+				list.remove(index);
+				break;
+				
+			case 4://check if book present
+				String isbn =sc.next();
+				Book key=new Book();
+				key.setIsbn(isbn);
+				if(list.contains(key))
+					System.out.println("Found");
+				else
+					System.out.println("Not Found");
+				break;
+				
+			case 5://delete all books
+				list.clear();
+				break;
+				
+			case 6://display number of books
+				System.out.println("Size: "+ list.size());
+				break;
+			
+			case 7:
+				class BookPriceComparator implements Comparator<Book>{
+					public int compare(Book b1,Book b2) {
+						int diff = -Double.compare(b1.getPrice(), b2.getPrice());
+						return diff;
+					}
+				}
+			}
+			
+		}while(choice!=0);
+	}
+
+}
