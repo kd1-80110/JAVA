@@ -1,0 +1,54 @@
+package com.sunbeam;
+
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class PersonMain {
+
+	public static void main(String[] args) {
+		
+		Map<String,Book> map = new HashMap<>();
+		int choice;
+		
+		do {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("0. Exit");
+			System.out.println("1. Insert In Map");
+			System.out.println("2. Find the Map");
+			System.out.print("Enter your choice: ");
+			choice = sc.nextInt();
+			sc.nextLine();
+			
+			switch(choice){
+			case 0:// Exit
+				System.out.println("Exiting the program. Thank you!");
+				break;
+			case 1:
+				Book b=new Book();
+				b.accept();
+				map.put(b.getIsbn(), b);
+				break;
+			case 2:
+				System.out.println("Enter Book to search");
+				String isbn = sc.next();
+				Book f = map.get(isbn);
+				if(f !=null)
+					System.out.println("Book is Found");
+				else
+					System.out.println("Book is not Found");
+				break;
+				
+			}
+		}while (choice != 0);
+	
+		
+	}
+
+}

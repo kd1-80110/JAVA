@@ -1,0 +1,14 @@
+package com.sunbeam;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class BookMain {
+
+	public static void main(String[] args) {
+		
+		Set<Book> set = new HashSet<>(); // duplicate based on Book's hashCode() + equals()
+		
+	}
+
+}

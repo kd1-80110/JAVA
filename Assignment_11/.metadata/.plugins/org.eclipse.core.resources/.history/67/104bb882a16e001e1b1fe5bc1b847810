@@ -1,0 +1,14 @@
+package com.sunbeam;
+
+public class Labour implements Emp {
+	private double hours;
+	private double rate;
+	
+	public Labour(double hours, double rate) {
+		this.hours = hours;
+		this.rate = rate;
+	}
+	
+	public double getSal()
+	
+}

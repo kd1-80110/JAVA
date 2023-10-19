@@ -1,0 +1,12 @@
+package com.sunbeam;
+
+public class MainEmp {
+
+	public static void main(String[] args) {
+		Manager m=new Manager(1000,2000);
+		Labour l=new Labour(1000,200000);
+		Clerk c=new Clerk(50000);
+
+	}
+
+}

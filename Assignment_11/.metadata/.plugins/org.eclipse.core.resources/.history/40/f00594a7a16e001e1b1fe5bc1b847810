@@ -1,0 +1,23 @@
+package com.sunbeam;
+
+public class Manager implements Emp {
+	private double basicSalary;
+	private double dearanceAllowance;
+	
+	public Manager(double basicSalary, double dearanceAllowance) {
+		this.basicSalary = basicSalary;
+		this.dearanceAllowance = dearanceAllowance;
+	}
+	
+	@Override
+	public double getSal() {
+		// TODO Auto-generated method stub
+		return basicSalary+dearanceAllowance;
+	}
+	
+	public double calcIncentives() {
+		return 0.20*basicSalary;
+	}
+
+
+}

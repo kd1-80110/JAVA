@@ -1,0 +1,18 @@
+package com.sunbeam;
+
+public class Manager {
+	private double basicSalary;
+	private double dearanceAllowance;
+	
+	public Manager(double basicSalary, double dearanceAllowance) {
+		this.basicSalary = basicSalary;
+		this.dearanceAllowance = dearanceAllowance;
+	}
+	
+	public double getSal() {
+		return basicSalary+dearanceAllowance;
+		
+	}
+
+
+}

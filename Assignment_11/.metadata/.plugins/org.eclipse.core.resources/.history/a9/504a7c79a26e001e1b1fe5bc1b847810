@@ -1,0 +1,6 @@
+package com.sunbeam;
+
+public class Clerk implements Emp{
+	private double salary;
+
+}
