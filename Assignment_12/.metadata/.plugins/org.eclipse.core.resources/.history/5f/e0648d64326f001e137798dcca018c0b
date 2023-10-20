@@ -1,0 +1,10 @@
+package com.sumbeam;
+
+public class TestingArrEleLambda {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

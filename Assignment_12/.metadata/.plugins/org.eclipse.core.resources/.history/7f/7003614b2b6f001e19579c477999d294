@@ -1,0 +1,5 @@
+package com.sunbeam;
+
+public interface ArithmeticInterface {
+	double calc(double num1,double num2);
+}

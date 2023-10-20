@@ -1,0 +1,16 @@
+package com.sunbeam;
+
+public class IntStream {
+
+	public static void main(String[] args) {
+		IntStream strm1=IntStream.range(1,10);
+		
+
+	}
+
+	private static IntStream range(int i, int j) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

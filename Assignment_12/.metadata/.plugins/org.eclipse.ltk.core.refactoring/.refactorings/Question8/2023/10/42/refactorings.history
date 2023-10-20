@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.sunbeam.IntStream.java&apos; to &apos;IntStreamMain.java&apos;&#x0A;- Original project: &apos;Question8&apos;&#x0A;- Original element: &apos;com.sunbeam.IntStream.java&apos;&#x0A;- Renamed element: &apos;com.sunbeam.IntStreamMain.java&apos;" description="Rename compilation unit &apos;IntStream.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.sunbeam{IntStream.java" name="IntStreamMain.java" references="false" stamp="1697806470774" version="1.0"/>
+</session>

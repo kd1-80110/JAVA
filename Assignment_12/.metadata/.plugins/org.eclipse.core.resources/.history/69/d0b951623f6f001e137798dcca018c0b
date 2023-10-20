@@ -1,0 +1,15 @@
+package com.sunbeam;
+
+import java.util.stream.Stream;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		Stream<Integer> strm = Stream.iterate(1, x -> x * 1)
+				.limit(6);
+		Integer sum = strm.reduce(0, (a,e) -> a * e);
+		System.out.println("Sum : " + sum);
+
+	}
+
+}

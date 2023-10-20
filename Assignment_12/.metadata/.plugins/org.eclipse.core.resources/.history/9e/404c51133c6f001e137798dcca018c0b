@@ -1,0 +1,29 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+
+public class TestingArrEleLambda {
+	
+	public static <T> int countIf(T[] arr, T key, Check<T> c) {
+		int count=0;
+		for (T t : arr) {
+			if(c.compare(t,key))
+				count++;
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Double [] arr = {44.1, 50.1, 99.1, 22.1, 50.1, 66.1};
+		Double key = 50.1;
+		
+		System.out.println("Enter Key To Count= ");
+		Double key=sc.nextDouble();
+
+		int cnt = countIf(arr, key, (x,y)-> x == y);
+		System.out.println("Count = " + cnt); // 4 (because 4 elements in array are greater than given key i.e. 50)
+
+	}
+
+}

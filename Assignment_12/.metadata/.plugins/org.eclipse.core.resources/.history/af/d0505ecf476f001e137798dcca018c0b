@@ -1,0 +1,15 @@
+package com.sunbeam;
+
+import java.util.stream.Stream;
+
+public class IntStream {
+
+	public static void main(String[] args) {
+		Stream<Integer> strm1=IntStream.range(1,10);
+		int total=strm1.sum();
+		strm1.forEach(ele->System.out.println(ele););
+
+	}
+
+	
+}

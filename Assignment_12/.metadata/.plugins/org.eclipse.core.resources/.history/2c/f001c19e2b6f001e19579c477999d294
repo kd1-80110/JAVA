@@ -1,0 +1,12 @@
+package com.sunbeam;
+
+public class Arithmetic {
+
+	static void calculate(double num1, double num2, Arithmetic op) {
+		double result = op.calc(num1, num2);
+		System.out.println("Result: "+result);
+		}
+	
+	
+
+}

@@ -1,0 +1,13 @@
+package com.sunbeam;
+
+import java.util.stream.Stream;
+
+public class IntStreamMain {
+
+	public static void main(String[] args) {
+		InStream strm1=IntStream.
+
+	}
+
+	
+}

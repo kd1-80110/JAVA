@@ -1,0 +1,10 @@
+package com.sunbeam;
+
+public interface ArithmeticInterface {
+	double calc(double num1,double num2);
+	
+	static void calculate(double num1, double num2, Arithmetic op) {
+		double result = op.calc(num1, num2);
+		System.out.println("Result: "+result);
+		}
+}

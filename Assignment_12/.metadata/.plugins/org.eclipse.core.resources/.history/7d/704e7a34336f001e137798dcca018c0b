@@ -1,0 +1,5 @@
+package com.sumbeam;
+
+public interface Check<T> {
+
+}
