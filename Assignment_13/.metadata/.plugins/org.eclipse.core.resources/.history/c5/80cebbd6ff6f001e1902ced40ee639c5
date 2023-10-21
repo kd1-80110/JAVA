@@ -1,0 +1,14 @@
+package com.sunbeam;
+
+public class Buffer {
+	public static void writeBuffer() {
+		Scanner sc
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.sunbeam;
+
+import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class Buffer {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		try (FileWriter fw = new FileWriter("buffer.txt")) {
+			try (BufferedWriter bw = new BufferedWriter(fw)) {
+				for (int i = 1; i <= 4; i++) {
+					System.out.println("Enter 4 lines of Input");
+					String line = sc.nextLine();
+					bw.write(line);
+					
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Files Written Successfully");
+
+	}
+
+}

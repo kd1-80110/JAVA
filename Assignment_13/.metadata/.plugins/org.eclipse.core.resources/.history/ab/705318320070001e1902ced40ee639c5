@@ -1,0 +1,21 @@
+package com.sunbeam;
+
+import java.io.FileOutputStream;
+import java.util.Scanner;
+
+public class Buffer {
+	public static void writeBuffer() {
+		Scanner sc=new Scanner(System.in);
+		
+		try(FileOutputStream fout=new FileOutputStream("buffer.txt")){
+			try()
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

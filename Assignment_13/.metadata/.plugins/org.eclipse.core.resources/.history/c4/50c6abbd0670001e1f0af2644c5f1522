@@ -1,0 +1,29 @@
+package com.sunbeam;
+
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class Buffer {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		try (FileReader fr = new FileReader("buffer.txt")) {
+			try (BufferedReader bw = new BufferedReader(fr)) {
+				
+					bw.read(line);
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Files Written Successfully");
+
+	}
+
+}
