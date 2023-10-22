@@ -1,0 +1,25 @@
+package com.sunbeam;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class UsersDao {
+	private Connection con;
+	
+	public UsersDao() throws SQLException {
+		con=DbUtil.getConnection();
+	}
+	
+	public void CLose() {
+		try {
+			if (con != null)
+				con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	//add new user
+	public int
+}

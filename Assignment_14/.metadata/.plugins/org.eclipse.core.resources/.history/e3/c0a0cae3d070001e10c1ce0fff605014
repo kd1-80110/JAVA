@@ -1,0 +1,35 @@
+package com.sunbeam;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class CandidateMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		/*
+		 * try(CandidateDao dao=new CandidateDao()){
+		 * System.out.println("Enter the Name"); String name=sc.next();
+		 * System.out.println("Enter the Party"); String party=sc.next();
+		 * System.out.println("Enter the Votes"); int votes=sc.nextInt(); 
+		 * int cnt=dao.save(name,party,votes); 
+		 * System.out.println("New Candidate Inserted"+
+		 * cnt); } catch (Exception e) { e.printStackTrace(); }
+		 */
+
+		try (CandidateDao dao = new CandidateDao()) {
+			System.out.println("Enter the Id to update");
+			int id=sc.nextInt();
+			System.out.println("Enter the Name");
+			String name = sc.next();
+			System.out.println("Enter the Party");
+			String party = sc.next();
+			
+			int cnt=dao.update(name, party, id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

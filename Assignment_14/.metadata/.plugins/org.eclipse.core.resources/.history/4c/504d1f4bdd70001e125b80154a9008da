@@ -1,0 +1,11 @@
+package com.sunbeam;
+//id | first_name | last_name | email             | password | dob        | status | role 
+public class Users {
+	private int id;
+	private String first_name;
+	private String last_name;
+	private String email;
+	private String passwd;
+	private String Bdate;
+	private boolean 
+}

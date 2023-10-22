@@ -1,0 +1,26 @@
+package com.sunbeam;
+
+//id | first_name | last_name | email             | password | dob        | status | role 
+public class Users {
+	private int id;
+	private String first_name;
+	private String last_name;
+	private String email;
+	private String passwd;
+	private String Bdate;
+	private boolean status;
+	private String role;
+
+	public Users(int id, String first_name, String last_name, String email, String passwd, String bdate, boolean status,
+			String role) {
+		this.id = id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.email = email;
+		this.passwd = passwd;
+		Bdate = bdate;
+		this.status = status;
+		this.role = role;
+	}
+
+}

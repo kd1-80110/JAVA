@@ -1,0 +1,120 @@
+package com.sunbeam;
+
+import java.util.List;
+import java.util.Scanner;
+/*
+private int id;
+private String first_name;
+private String last_name;
+private String email;
+private String passwd;
+private String bdate;
+private boolean status;
+private String role;*/
+
+public class UsersMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int choice;
+		do {
+			System.out.println("Menu");
+			System.out.println("1.Add New Users");
+			System.out.println("2.Delete Users");
+			System.out.println("3.Update Users by FirstName, LastName and Email");
+			System.out.println("4.Display all Users");
+			System.out.println("5.Display all Candidates of specific Last Name");
+			System.out.println("0.Exit");
+			choice = sc.nextInt();
+
+			switch (choice) {
+			case 1:
+				try (UsersDao dao = new UsersDao()) {
+					System.out.println("Enter the First Name");
+					String first_name = sc.next();
+					System.out.println("Enter the Last Name");
+					String last_name = sc.next();
+					System.out.println("Enter the Email");
+					String email = sc.next();
+					System.out.println("Enter the Password");
+					String password=sc.next();
+					System.out.println("Enter the BirthDate");
+					String bdate=sc.next();
+					System.out.println("Enter the Status");
+					boolean status=sc.nextBoolean();
+					System.out.println("Enter the Role");
+					String role=sc.next();
+					int cnt = dao.save(first_name,last_name,email,password,bdate,status,role);
+					System.out.println("New Candidate Inserted" + cnt);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				break;
+			case 2:
+				try (UsersDao dao = new UsersDao()) {
+					System.out.print("Enter candidate id to be deleted: ");
+					int id = sc.nextInt();
+					int cnt = dao.deleteById(id);
+					System.out.println("Candidates deleted: " + cnt);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				break;
+//
+			case 3:
+				try (UsersDao dao = new UsersDao()) {
+					System.out.println("Enter the Id to update: ");
+					int id = sc.nextInt();
+					System.out.println("Enter the First Name: ");
+					String first_name= sc.next();
+					System.out.println("Enter the Last Name");
+					String last_name = sc.next();
+					System.out.println("Enter the Email");
+					String email=sc.next();
+					int cnt = dao.update(first_name, last_name,email, id);
+					System.out.println("Updated Name And Email: ");
+
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				break;
+
+			case 4:
+				try (UsersDao dao = new UsersDao()) {
+					List<Users> list = dao.findAll();
+					list.forEach(u -> System.out.println(u));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				break;
+
+			case 5:
+				try (UsersDao dao = new UsersDao()) {
+					System.out.println("Enter the Last Name");
+					String last_name = sc.next();
+					List<Users> list = dao.findByName(last_name);
+					list.forEach(u -> System.out.println(u));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				break;
+
+
+			case 0:
+				System.out.println("THANKS FOR USING OUR APPLICATION...:)");
+				break;
+
+			default:
+				break;
+			}
+
+		} while (choice != 0);
+
+	}
+
+}

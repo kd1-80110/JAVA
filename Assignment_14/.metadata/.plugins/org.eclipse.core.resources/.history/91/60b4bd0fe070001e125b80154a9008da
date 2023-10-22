@@ -1,0 +1,6 @@
+package com.sunbeam;
+
+public class PartyVotes {
+	private String party;
+	private Stri
+}

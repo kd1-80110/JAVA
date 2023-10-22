@@ -1,0 +1,39 @@
+package com.sunbeam;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+/*
+private int id;
+private String first_name;
+private String last_name;
+private String email;
+private String passwd;
+private String Bdate;
+private boolean status;
+private String role;*/
+public class UsersDao {
+	private Connection con;
+
+	public UsersDao() throws SQLException {
+		con = DbUtil.getConnection();
+	}
+
+	public void CLose() {
+		try {
+			if (con != null)
+				con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	// add new user
+	public int save(String first_name, String last_name, String email, String passwd, String Bdate, boolean status,
+			String role) {
+		String sql="Insert into users values";
+		return 0;
+
+	}
+}

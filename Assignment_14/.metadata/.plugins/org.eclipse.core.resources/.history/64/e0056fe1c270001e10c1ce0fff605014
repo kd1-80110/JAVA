@@ -1,0 +1,17 @@
+package com.sunbeam;
+
+import java.sql.Connection;
+
+/*
+int save(Candidate c); // add new candidate.
+int update(Candidate c); // modify name and party for the id.
+List<PartyVotes> getPartywiseVotes(); // get partywise total votes.
+// create a POJO class "PartyVotes" with two fields "party" and "votes".
+*/
+
+public class CandidateDao{
+	private Connection
+	public int save(Candidate c) {
+		
+	}
+}

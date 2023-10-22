@@ -1,0 +1,141 @@
+package com.sunbeam;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Scanner;
+
+public class CandidateMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		do {
+			int choice;
+			System.out.println("Menu");
+			System.out.println("1.Add New Candidate");
+			System.out.println("2.Delete Candidate");
+			System.out.println("3.Update Candidate");
+			System.out.println("4.Display all Candidates");
+			System.out.println("5.Display all Candidates of specific name");
+			System.out.println("6.Increment Candidate Votes");
+			System.out.println("7.Display Vote Count of all Parties");
+			System.out.println("0.Exit");
+			choice = sc.nextInt();
+			
+			switch (choice) {
+			case 1:
+				try (CandidateDao dao = new CandidateDao()) {
+					System.out.println("Enter the Name");
+					String name = sc.next();
+					System.out.println("Enter the Party");
+					String party = sc.next();
+					System.out.println("Enter the Votes");
+					int votes = sc.nextInt();
+					int cnt = dao.save(name, party, votes);
+					System.out.println("New Candidate Inserted" + cnt);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				break;
+			case 2:
+				
+				break;
+
+			case 3:
+				
+
+				break;
+
+			case 4:
+				
+				break;
+
+			case 5:
+				
+
+				break;
+
+			case 6:
+				
+				break;
+
+			case 7:
+				
+
+				break;
+
+			case 0:
+				System.out.println("THANKS FOR USING OUR APPLICATION...:)");
+				break;
+
+			default:
+				break;
+			}
+			
+			
+		} while (condition);
+
+
+
+//		try (CandidateDao dao = new CandidateDao()) {
+//			System.out.println("Enter the Id to update: ");
+//			int id = sc.nextInt();
+//			System.out.println("Enter the Name");
+//			String name = sc.next();
+//			System.out.println("Enter the Party");
+//			String party = sc.next();
+//			System.out.println();
+//
+//			int cnt = dao.update(name, party, id);
+//			System.out.println("Updated Name And Party: ");
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+
+//		try (CandidateDao dao = new CandidateDao()) {
+//			System.out.print("Enter candidate id to be deleted: ");
+//			int id = sc.nextInt();
+//			int cnt = dao.deleteByID(id);
+//			System.out.println("Candidates deleted: " + cnt);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+
+//		try (CandidateDao dao = new CandidateDao()) {
+//			List<Candidate> list = dao.findAll();
+//			list.forEach(c -> System.out.println(c));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		
+//		try(CandidateDao dao=new CandidateDao()){
+//			System.out.println("Enter the Name");
+//			String name=sc.next();
+//			List<Candidate>list=dao.findByName(name);
+//			list.forEach(c->System.out.println(c));		
+//		}catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		
+//		try(CandidateDao dao = new CandidateDao()) {
+//			System.out.print("Enter candidate id (to vote): ");
+//			int candidateId = sc.nextInt();
+//			int cnt = dao.incrementVote(candidateId);
+//			System.out.println("Rows updated: " + cnt);
+//		} // dao.close();
+//		catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		
+		try(CandidateDao dao=new CandidateDao()){
+		
+			List<PartyVotes>list1=dao.getPartywiseVotes();
+			list1.forEach(c->System.out.println(c));
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

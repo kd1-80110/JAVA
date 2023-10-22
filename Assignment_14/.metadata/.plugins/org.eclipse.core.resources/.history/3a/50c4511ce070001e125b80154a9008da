@@ -1,0 +1,12 @@
+package com.sunbeam;
+
+public class PartyVotes {
+	private String party;
+	private int votes;
+	public PartyVotes(String party, int votes) {
+		this.party = party;
+		this.votes = votes;
+	}
+	
+	
+}

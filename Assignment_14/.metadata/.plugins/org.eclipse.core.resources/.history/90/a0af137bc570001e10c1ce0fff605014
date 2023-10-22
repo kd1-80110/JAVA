@@ -1,0 +1,34 @@
+package com.sunbeam;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+/*
+int save(Candidate c); // add new candidate.
+int update(Candidate c); // modify name and party for the id.
+List<PartyVotes> getPartywiseVotes(); // get partywise total votes.
+// create a POJO class "PartyVotes" with two fields "party" and "votes".
+*/
+
+public class CandidateDao{
+	private Connection con;
+	private CandidateDao() throws SQLException {
+		con=DbUtil.getConnection();
+	}
+	public int save(Candidate c) throws SQLException {
+		Scanner sc=new Scanner(System.in);
+		String sql="INSERT INTO candidate Values(default,?,?,?)";
+		try(PreparedStatement stmt=con.prepareStatement(sql)){
+			System.out.println("Enter the Name");
+			String name=sc.next();
+			System.out.println("Enter the Party");
+			String party=sc.next();
+			System.out.println("Enter the Votes");
+			int 
+		}
+		
+		return -1;
+	}
+}
